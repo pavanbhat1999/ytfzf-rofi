@@ -159,7 +159,7 @@ print_help___ytfzf__() {
         --info-wait              When -I or -L is used,
                                  wait for user input before continuing
 
-        --info-action=<action>   
+        --info-action=<action>
                                  The action to do when --info-wait is 1.
                                  action can be one of
                                       q: exit
@@ -898,7 +898,7 @@ generic_wrapper() {
 # The menu to use instead of fzf when -D is specified
 external_menu() {
 	# dmenu extremely laggy when showing tabs
-	tr -d '\t' | remove_ansi_escapes | dmenu -i -l 30 -p "$1"
+	tr -d '\t' | remove_ansi_escapes | rofi -dmenu -i -p "$1"
 }
 
 search_prompt_menu() {
@@ -1402,7 +1402,7 @@ set_vars() {
 	instances_file="$cache_dir/instancesV2.json"
 
 	# read from environment to reset any variables to what the user set
-    
+
 	if [ "$check_exists" -eq 1 ]; then
 		_current_var_name=
 		_current_var_value=
