@@ -145,7 +145,7 @@ To use an extension addon run `ytfzf -e <extension> ...`
 ytfzf -t <search>
 ```
 
-> Use `dmenu` as the menu instead of `fzf`
+> Use `rofi` as the menu instead of `fzf`
 
 ```sh
 ytfzf -D <search>
